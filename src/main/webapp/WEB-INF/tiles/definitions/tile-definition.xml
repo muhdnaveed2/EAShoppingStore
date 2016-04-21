@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+	
+<tiles-definitions>
+	
+	<definition name="baseLayout" template="/WEB-INF/tiles/template/baseLayout.jsp">
+		<put-attribute name="title" value="Sample Title" />
+		<put-attribute name="heading" value="" />
+		<put-attribute name="tagline" value="Makes you feel like Shopping." />
+ 		<put-attribute name="navigation" value="/WEB-INF/tiles/template/loginNavigation.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+
+ 	<!-- <definition name="welcome" extends="baseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="heading" value="U-Store: Your One-Stop Shop" />
+		<put-attribute name="navigation" value="/WEB-INF/tiles/template/loginNavigation.jsp" />
+ 		<put-attribute name="content" value="/WEB-INF/views/welcome.jsp" />
+	</definition> -->
+	
+	<definition name="Home" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - Home" />
+		<put-attribute name="heading" value="U-Store" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/loginNavigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/Home.jsp" />
+	</definition>
+	
+	<definition name="newProduct" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - New Product" />
+		<put-attribute name="heading" value="Add New Product" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/newProduct.jsp" />
+	</definition>
+	
+	<definition name="saveProduct" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - New Product Saved" />
+		<put-attribute name="heading" value="Product Saved" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/saveProduct.jsp" />
+	</definition>
+	
+	<definition name="showProducts" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - All Products" />
+		<put-attribute name="heading" value="Showing All Products" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/showProducts.jsp" />
+	</definition>
+	
+	<definition name="productDetail" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - Product Detail" />
+		<put-attribute name="heading" value="Product Details" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/loginNavigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/productDetail.jsp" />
+	</definition>
+	
+	<definition name="checkout" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - Checkout" />
+		<put-attribute name="heading" value="Order Checkout" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/loginNavigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/checkout.jsp" />
+	</definition>
+	
+	<definition name="newCustomer" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - New Product" />
+		<put-attribute name="heading" value="Add New Customer" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/newCustomer.jsp" />
+	</definition>
+	
+	<definition name="addShippingAddress" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - Add Address" />
+		<put-attribute name="heading" value="Add New Address" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/addShippingAddress.jsp" />
+	</definition>
+	
+	<definition name="orderConfirmation" extends="baseLayout">
+		<put-attribute name="title" value="U-Store - Order Confirmation" />
+		<put-attribute name="heading" value="Your Order is Confirmed" />
+		<!-- <put-attribute name="tagline" value="Makes you feel like Shopping." /> -->
+		<!-- <put-attribute name="navigation" value="/WEB-INF/tiles/template/navigation.jsp" /> -->
+		<put-attribute name="content" value="/WEB-INF/views/orderConfirmation.jsp" />
+	</definition>
+	
+	<definition name="login" extends="baseLayout">
+		<put-attribute name="title" value="Login" />
+		<!-- <put-attribute name="heading" value="Login" />
+		<put-attribute name="tagline" value="Enter your Credentials" /> -->
+		<put-attribute name="navigation" value="" />
+		<put-attribute name="content" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	 	
+	<definition name="productNotFound" extends="baseLayout">
+		<put-attribute name="title" value="Product Exception" />
+ 		<put-attribute name="content" value="/WEB-INF/views/productNotFound.jsp" />
+	</definition>
+	
+	
+<!-- ANONYMOUS LAYOUT -->
+
+
+	<definition name="anonBaseLayout" template="/WEB-INF/tiles/template/anonBaseLayout.jsp">
+		<put-attribute name="body-tile"   value="" />
+		<put-attribute name="head-tile"   value="" />
+		<put-attribute name="left-nav-tile"   value="/WEB-INF/tiles/template/navigation.jsp" />
+		<put-attribute name="foot-tile"   value="/WEB-INF/tiles/template/footer.jsp" />
+	</definition>
+
+	<definition name="welcomeanon" extends="anonBaseLayout">
+		<put-attribute name="title" value="Welcome" />
+		<put-attribute name="head-tile" value="Wonder Bar" />
+ 		<put-attribute name="body-tile" value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+	
+	<definition name="productsanon" extends="anonBaseLayout">
+		<put-attribute name="title" value="Products" />
+		<put-attribute name="head-tile" value="Wonder Bar Products" />
+ 		<put-attribute name="body-tile" value="/WEB-INF/views/products.jsp" />
+	</definition>
+	
+	<definition name="productanon" extends="anonBaseLayout">
+		<put-attribute name="title" value="Product" />
+		<put-attribute name="head-tile" value="A Wonder Bar Product" />
+ 		<put-attribute name="body-tile" value="/WEB-INF/views/product.jsp" />
+	</definition>
+	
+	<definition name="loginanon" extends="anonBaseLayout">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="head-tile" value="Login to Wonder Bar " />
+ 		<put-attribute name="body-tile" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	 	
+</tiles-definitions>

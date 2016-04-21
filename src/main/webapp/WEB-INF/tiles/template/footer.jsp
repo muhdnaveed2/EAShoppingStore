@@ -1,0 +1,1 @@
+<p>&copy; U-Store: Makes you feel like Shopping.</p>
